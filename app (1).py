@@ -37,8 +37,29 @@ if not cover_path.is_file():
 st.markdown(
     """<style>
     .block-container { max-width: 1150px; padding-top: 2.2rem; }
-    h1, h2, h3 { color: #123844; }
-    [data-testid="stSidebar"] { background-color: #eaf5f3; }
+    section[data-testid="stSidebar"] {
+        background-color: #e6f1ee !important;
+        border-right: 1px solid #c8dfda;
+    }
+    section[data-testid="stSidebar"] > div {
+        background-color: #e6f1ee !important;
+    }
+    section[data-testid="stSidebar"] h1,
+    section[data-testid="stSidebar"] h2,
+    section[data-testid="stSidebar"] h3,
+    section[data-testid="stSidebar"] p,
+    section[data-testid="stSidebar"] span,
+    section[data-testid="stSidebar"] label,
+    section[data-testid="stSidebar"] small {
+        color: #14323e !important;
+    }
+    section[data-testid="stSidebar"] [data-testid="stCaptionContainer"] p {
+        color: #44636d !important;
+    }
+    section[data-testid="stSidebar"] [role="radiogroup"] label:hover {
+        background-color: #d3e9e4;
+        border-radius: 8px;
+    }
     </style>""",
     unsafe_allow_html=True,
 )
